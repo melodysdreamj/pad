@@ -20,10 +20,10 @@ You can use:
 
    ```dart
    const Pad(
-      bottom: 10.0,
-      top: 10.0,
-      left: 10.0,
-      right: 10.0,
+      b: 10.0,
+      t: 10.0,
+      l: 10.0,
+      r: 10.0,
       child: Text("Foo")
    )
    ```
@@ -64,6 +64,12 @@ All parameters are optional
 
    ```dart
    const PadVertical(10.0, child: Text("Foo"))
+   ```
+
+### Pad symmetric
+
+   ```dart
+   const PadSymmetric(10.0, 10.0, child: Text("Foo"))
    ```
 
 ### Pad all
