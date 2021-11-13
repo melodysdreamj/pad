@@ -4,13 +4,12 @@ import 'package:flutter/material.dart';
 class Pad extends StatelessWidget {
   /// Provide a direction
   const Pad(
-      {Key? key,
+      {
       this.l = 0.0,
       this.t = 0.0,
       this.r = 0.0,
       this.b = 0.0,
-      this.child})
-      : super(key: key);
+      this.child});
 
   /// Left padding
   final double l;
