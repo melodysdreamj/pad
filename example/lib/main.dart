@@ -28,24 +28,24 @@ class _MyHomePageState extends State<MyHomePage> {
           child: ListView(children: <Widget>[
             Container(
               color: Colors.grey[300],
-              child: const Pad(top: 100.0, left: 100.0, child: Text("Foo")),
+              child: const Pad(t: 100.0, l: 100.0, child: Text("Foo")),
             ),
-            const Pad(bottom: 10.0),
+            const Pad(b: 10.0),
             Container(
               color: Colors.grey[300],
               child: const PadAll(100.0, child: Text("Foo")),
             ),
-            const Pad(bottom: 10.0),
+            const Pad(b: 10.0),
             Container(
               color: Colors.grey[300],
               child: const PadVertical(100.0, child: Text("Foo")),
             ),
-            const Pad(bottom: 10.0),
+            const Pad(b: 10.0),
             Container(
               color: Colors.grey[300],
               child: const PadHorizontal(100.0, child: Text("Foo")),
             ),
-            const Pad(bottom: 10.0),
+            const Pad(b: 10.0),
             Container(
               color: Colors.grey[300],
               child: const PadLTRB(
@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text("Foo"),
               ),
             ),
-            const Pad(bottom: 50.0)
+            const Pad(b: 50.0)
           ]), // This trailing comma makes auto-formatting nicer for build methods.
         ));
   }

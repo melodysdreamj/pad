@@ -5,24 +5,24 @@ class Pad extends StatelessWidget {
   /// Provide a direction
   const Pad(
       {Key? key,
-      this.left = 0.0,
-      this.top = 0.0,
-      this.right = 0.0,
-      this.bottom = 0.0,
+      this.l = 0.0,
+      this.t = 0.0,
+      this.r = 0.0,
+      this.b = 0.0,
       this.child})
       : super(key: key);
 
   /// Left padding
-  final double left;
+  final double l;
 
   /// Top padding
-  final double top;
+  final double t;
 
   /// Right padding
-  final double right;
+  final double r;
 
   /// Bottom padding
-  final double bottom;
+  final double b;
 
   /// Optional child
   final Widget? child;
@@ -32,11 +32,11 @@ class Pad extends StatelessWidget {
     late final Padding p;
     switch (child == null) {
       case true:
-        p = Padding(padding: EdgeInsets.fromLTRB(left, top, right, bottom));
+        p = Padding(padding: EdgeInsets.fromLTRB(l, t, r, b));
         break;
       case false:
         p = Padding(
-            padding: EdgeInsets.fromLTRB(left, top, right, bottom),
+            padding: EdgeInsets.fromLTRB(l, t, r, b),
             child: child);
     }
     return p;
@@ -228,6 +228,33 @@ class PadHorizontal extends StatelessWidget {
       case false:
         p = Padding(
             padding: EdgeInsets.symmetric(horizontal: padding), child: child);
+    }
+    return p;
+  }
+}
+
+/// Horizontal symmetric
+class PadSymmetric extends StatelessWidget {
+  /// Provide a [horizontal,vertical]
+  const PadSymmetric( {required this.horizontal,required this.vertical,Key? key, this.child}) : super(key: key);
+
+  /// The padding value
+  final double horizontal;
+  final double vertical;
+
+  /// The child widget
+  final Widget? child;
+
+  @override
+  Widget build(BuildContext context) {
+    late final Padding p;
+    switch (child == null) {
+      case true:
+        p = Padding(padding: EdgeInsets.symmetric(horizontal: horizontal,vertical: vertical));
+        break;
+      case false:
+        p = Padding(
+            padding: EdgeInsets.symmetric(horizontal: horizontal,vertical: vertical), child: child);
     }
     return p;
   }
